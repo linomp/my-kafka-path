@@ -21,6 +21,6 @@
     ```
 - To consume message and print key:
     ```
-    kafka-console-consumer --bootstrap-server broker0:29092 --topic people --from-beggining --property "print.key=true"
+    kafka-console-consumer --bootstrap-server broker0:29092 --topic people --from-beginning --property "print.key=true"
     ``` 
 

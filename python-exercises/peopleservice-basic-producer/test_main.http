@@ -1,11 +1,8 @@
-# Test your FastAPI endpoints
-
-GET http://127.0.0.1:8000/
+# curl -H "Content-Type: application/json" -d "{\"count\":3}" -X POST http://127.0.0.1:8000/api/people
+POST http://127.0.0.1:8000/api/people
+Content-Type: application/json
 Accept: application/json
 
-###
-
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
-
-###
+{
+  "count": 3
+}
