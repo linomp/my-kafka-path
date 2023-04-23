@@ -2,6 +2,7 @@ plugins {
     java
     id("org.springframework.boot") version "2.7.11"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
+    id("io.freefair.lombok") version "6.4.2"
 }
 
 group = "com.example"
@@ -15,7 +16,8 @@ repositories {
 dependencies {
     // There was a build issue with faker and snake yaml dependency: https://github.com/DiUS/java-faker/issues/327
     implementation("com.github.javafaker:javafaker:1.0.2") { exclude("org.yaml") }
-    implementation("org.projectlombok:lombok:1.18.22")
+    compileOnly("org.projectlombok:lombok:1.18.22")
+    annotationProcessor("org.projectlombok:lombok:1.18.22")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.kafka:spring-kafka")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
