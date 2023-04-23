@@ -28,9 +28,7 @@ public class PeopleController {
     // kafka template is a wrapper for the Producer API
     private KafkaTemplate<String, Person> kafkaTemplate;
 
-    public PeopleController(
-            @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") KafkaTemplate<String, Person> kafkaTemplate
-    ) {
+    public PeopleController(KafkaTemplate<String, Person> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
