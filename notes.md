@@ -28,7 +28,7 @@
 
 - retry defaults depend on implementation!
 - batching is configurable, and recommended for high throughput apps (that write a lot) - this helps to avoid overhead of sending many small messages 
-    - batch size is the number of messages to wait for before sending
+    - batch size is the number of bytes to wait for before sending (is there no way to specify nr. of messages?)
     - linger.ms is the time to wait for more messages before sending
 - configs for sending records:
     - acks=0 -> producer will not wait for any acknowledgement from the broker (not recommended)
