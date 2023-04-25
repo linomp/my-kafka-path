@@ -19,7 +19,13 @@ public class PeopleProducerConfig {
     public Map<String, Object> producerConfigs() {
         return Map.of(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers,
                 ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, org.apache.kafka.common.serialization.StringSerializer.class,
-                ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, org.springframework.kafka.support.serializer.JsonSerializer.class
+                ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, org.springframework.kafka.support.serializer.JsonSerializer.class,
+                ProducerConfig.ACKS_CONFIG, "all",
+                ProducerConfig.BATCH_SIZE_CONFIG, 24000,
+                ProducerConfig.LINGER_MS_CONFIG, 600,
+                ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true,
+                ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, 1, // reduces throughput a bit, but guarantees that producer won't write out-of-order in case of errors & retries
+                ProducerConfig.RETRIES_CONFIG, 5
         );
     }
 

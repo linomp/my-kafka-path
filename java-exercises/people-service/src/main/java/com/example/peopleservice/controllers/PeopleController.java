@@ -22,7 +22,7 @@ public class PeopleController {
     private static final Logger logger = LoggerFactory.getLogger(PeopleController.class);
 
     // get topic name from application.yaml file as @Value
-    @Value("${topics.people-basic.name}")
+    @Value("${topics.people-advanced.name}")
     private String peopleTopic;
 
     // kafka template is a wrapper for the Producer API
@@ -54,7 +54,8 @@ public class PeopleController {
             future.addCallback(
                     result -> {
                         assert result != null;
-                        logger.info("Sent message=[{}] with offset=[{}]", person, result.getRecordMetadata().offset());
+                        logger.info("Sent message=[{}], partition=[{}], offset=[{}]",
+                                person, result.getRecordMetadata().partition(), result.getRecordMetadata().offset());
                     },
                     ex -> logger.error("Unable to send message=[{}] due to : {}", person, ex.getMessage())
             );

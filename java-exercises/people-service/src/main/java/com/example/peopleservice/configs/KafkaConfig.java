@@ -25,17 +25,17 @@ public class KafkaConfig {
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
-    @Value("${topics.people-basic.name}")
+    @Value("${topics.people-advanced.name}")
     private String topicName;
 
-    @Value("${topics.people-basic.partitions}")
+    @Value("${topics.people-advanced.partitions}")
     private int topicPartitions;
 
-    @Value("${topics.people-basic.replicas}")
+    @Value("${topics.people-advanced.replicas}")
     private int topicReplicas;
 
     @Bean
-    public NewTopic peopleBasicTopic() {
+    public NewTopic peopleAdvancedTopic() {
         return TopicBuilder.name(topicName)
                 .partitions(topicPartitions)
                 .replicas(topicReplicas)
@@ -43,7 +43,7 @@ public class KafkaConfig {
     }
 
     @Bean
-    public NewTopic peopleBasicShortTopic() {
+    public NewTopic peopleAdvancedShortTopic() {
         return TopicBuilder.name(topicName + "-short")
                 .partitions(topicPartitions)
                 .replicas(topicReplicas)
@@ -53,7 +53,7 @@ public class KafkaConfig {
 
     // in spring boot lifecycle, this method is called after all beans are created
     @PostConstruct
-    public void changePeopleBasicTopicRetention() {
+    public void changePeopleAdvancedTopicRetention() {
         // create a connection with configs to bootstrap servers
         Map<String, Object> configs = Map.of(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
 
