@@ -24,3 +24,16 @@
     kafka-console-consumer --bootstrap-server broker0:29092 --topic people --from-beginning --property "print.key=true"
     ``` 
 
+### Producer Details
+
+- retry defaults depend on implementation!
+- batching is configurable, and recommended for high throughput apps (that write a lot) - this helps to avoid overhead of sending many small messages 
+    - batch size is the number of messages to wait for before sending
+    - linger.ms is the time to wait for more messages before sending
+- configs for sending records:
+    - acks=0 -> producer will not wait for any acknowledgement from the broker (not recommended)
+    - acks=1 -> producer will wait for the leader to acknowledge the message
+    - acks=all -> producer will wait for the leader and all replicas to acknowledge the message (most reliable)
+    - for really sensitive odering, set `max.in.flight.requests.per.connection=1` to ensure that only 1 message is sent at a time.
+- retries & timeout are very high by default, better left as is
+- beware of ordering that can be lost when adding partitions!

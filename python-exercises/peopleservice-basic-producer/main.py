@@ -1,18 +1,20 @@
 import logging
 import os
-import re
 from typing import List
 
 from dotenv import load_dotenv
 from faker import Faker
 from fastapi import FastAPI
-from kafka import KafkaAdminClient, KafkaProducer
+from kafka import KafkaAdminClient
 from kafka.admin import NewTopic
 from kafka.errors import TopicAlreadyExistsError
 
 from commands import CreatePeopleCommand
 from entities import Person
+from handlers import SuccessHandler, ErrorHandler
+from utils import make_producer, to_kafka_message_key
 
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 load_dotenv(verbose=True)
@@ -36,15 +38,6 @@ async def startup_event():
         client.close()
 
 
-def make_producer():
-    return KafkaProducer(bootstrap_servers=os.environ.get("BOOTSTRAP_SERVERS"))
-
-
-def to_kafka_message_key(value: str) -> bytes:
-    # Regex source: https://www.autoregex.xyz/;  it matches all non-alphanumeric characters
-    return re.sub(r'[^a-zA-Z0-9]', '-', value.lower()).encode("utf-8")
-
-
 @app.post("/api/people", status_code=201, response_model=List[Person])
 async def create_people(command: CreatePeopleCommand):
     people: List[Person] = []
@@ -61,10 +54,10 @@ async def create_people(command: CreatePeopleCommand):
         people.append(person)
 
         producer.send(
-            topic=os.environ.get("TOPICS_PEOPLE_BASIC_NAME"),
+            topic=os.environ.get("TOPICS_PEOPLE_ADVANCED_NAME"),
             key=to_kafka_message_key(person.title),
             value=person.json().encode("utf-8")
-        )
+        ).add_callback(SuccessHandler(person)).add_errback(ErrorHandler(person))
 
     # always important to flush the producer, because it blocks until all messages are sent, including retries
     producer.flush()
