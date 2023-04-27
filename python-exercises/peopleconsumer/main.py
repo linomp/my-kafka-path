@@ -1,16 +1,40 @@
-# This is a sample Python script.
+# set up logger to INFO level
+import json
+import logging
+import os
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from dotenv import load_dotenv
+from kafka import KafkaConsumer
+
+logging.basicConfig(level=logging.INFO)
+
+logger = logging.getLogger(__name__)
+
+load_dotenv(verbose=True)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    # log that python consumer started for topic TOPICS_PEOPLE_BASIC_NAME
+    logger.info(f"Python consumer started for topic {os.environ.get('TOPICS_PEOPLE_BASIC_NAME')}")
+
+    consumer = KafkaConsumer(
+        bootstrap_servers=os.environ.get('BOOTSTRAP_SERVERS'),
+        group_id=os.environ.get('CONSUMER_GROUP'),
+        key_deserializer=lambda m: m.decode('utf-8'),
+        value_deserializer=lambda m: json.loads(m.decode('utf-8'))
+    )
+
+    consumer.subscribe([os.environ.get('TOPICS_PEOPLE_BASIC_NAME')])
+
+    for record in consumer:
+        logger.info(
+            f"""
+            Received message {record.value} 
+            with key {record.key} 
+            from partition {record.partition} 
+            at offset {record.offset}
+            """)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
