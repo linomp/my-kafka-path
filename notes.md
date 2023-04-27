@@ -37,3 +37,12 @@
     - for really sensitive odering, set `max.in.flight.requests.per.connection=1` to ensure that only 1 message is sent at a time.
 - retries & timeout are very high by default, better left as is
 - beware of ordering that can be lost when adding partitions!
+
+## Consumer API
+- scalability of throughput in kafka is achieved via partitions;  more consumers can be added to the group if one consumer starts lagging behind 
+- each partition can be read by only 1 consumer from a givne consumer group
+- consumer rebalancing:  re-distributing the available partitions across teh available consumers
+- consumer offsets topic stores the offsets of the next message to be read by each consumer group from a specific partition of a specific topic.  In other words, the messages stored follow the following format:
+    - key: consumer group + topic + partition
+    - value: offset of the next message to be read
+
