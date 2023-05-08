@@ -25,7 +25,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
-    @Value("${topics.people-advanced.name}")
+    @Value("${topics.people-basic.name}")
     private String topicName;
 
     @Value("${topics.people-advanced.partitions}")
@@ -35,7 +35,7 @@ public class KafkaConfig {
     private int topicReplicas;
 
     @Bean
-    public NewTopic peopleAdvancedTopic() {
+    public NewTopic peopleTopic() {
         return TopicBuilder.name(topicName)
                 .partitions(topicPartitions)
                 .replicas(topicReplicas)
@@ -43,7 +43,7 @@ public class KafkaConfig {
     }
 
     @Bean
-    public NewTopic peopleAdvancedShortTopic() {
+    public NewTopic peopleShortTopic() {
         return TopicBuilder.name(topicName + "-short")
                 .partitions(topicPartitions)
                 .replicas(topicReplicas)
