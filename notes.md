@@ -46,3 +46,6 @@
     - key: consumer group + topic + partition
     - value: offset of the next message to be read
 
+### Consumer details
+- default behavior of consumer is At-Least-Once!  (offsets are commited automatically after a certain time, if there are no errors processing the received set of records;   but if there is any intermediate error, no offset is commited, and the consumer will re-read & re-process the same set of records)
+
