@@ -47,5 +47,22 @@
     - value: offset of the next message to be read
 
 ### Consumer details
+#### At-Least-Once processing
 - default behavior of consumer is At-Least-Once!  (offsets are commited automatically after a certain time, if there are no errors processing the received set of records;   but if there is any intermediate error, no offset is commited, and the consumer will re-read & re-process the same set of records)
+- We can also disable auto commit (enable.auto.commit=false), and then we have to commit the offset (+1) manually 
+- best performance but can lead to duplicates
+
+#### At Most Once Processing
+- disable auto-commit
+- collect records in  some data structure, and then commit the highest offset before processing the messages
+- makes sense in use cases where it may be ok missing a few messages, but it is critical not to process the same message twice!
+
+#### Exactly Once Processing
+- disable auto-commit
+- commit offset after processing each message
+- requires idempotent producer (to avoid duplicates)
+- highest robustness, but also the slowest
+- generally this is the recommended approach based on instructor's experience
+- transactions??   (only read commited messages?) ;  TODO:  read more about this
+
 
