@@ -65,3 +65,6 @@
 - generally this is the recommended approach based on instructor's experience
 - transactions??   (only read commited messages?) ;  TODO:  read more about this
 
+#### Consumer Lag
+- metric to understand how caught up the consumer is wrt the producer
+- it's possible to reset the offset to a partition; useful for re-processing or skipping messages
