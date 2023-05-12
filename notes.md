@@ -65,4 +65,3 @@
 - generally this is the recommended approach based on instructor's experience
 - transactions??   (only read commited messages?) ;  TODO:  read more about this
 
-

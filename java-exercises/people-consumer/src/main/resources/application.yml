@@ -8,3 +8,5 @@ spring:
 topics:
   people-basic:
     name: "people.basic.java"
+  people-advanced:
+    name: "people.advanced.java"

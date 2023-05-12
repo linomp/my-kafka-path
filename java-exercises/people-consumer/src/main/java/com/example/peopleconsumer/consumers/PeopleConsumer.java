@@ -10,7 +10,9 @@ import org.springframework.stereotype.Component;
 public class PeopleConsumer {
     static final Logger logger = LoggerFactory.getLogger(PeopleConsumer.class);
 
-     @KafkaListener(topics = "people.basic.java", containerFactory = "personListenerContainerFactory")
+
+     // Spring Kafka library calls this and passes a record.  It abstracts the polling loop
+     @KafkaListener(topics = "${topics.people-advanced.name}", containerFactory = "personListenerContainerFactory")
      public void handle(Person person){
          logger.info("Consumed person: {}", person);
      }

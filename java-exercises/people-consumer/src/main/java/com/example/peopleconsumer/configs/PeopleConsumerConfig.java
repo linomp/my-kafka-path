@@ -10,6 +10,7 @@ import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
+import org.springframework.kafka.listener.ContainerProperties;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 
 import java.util.Map;
@@ -27,7 +28,7 @@ public class PeopleConsumerConfig {
     public Map<String,Object> consumerConfigs(){
         return Map.of(
                 ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,bootstrapServers,
-                ConsumerConfig.GROUP_ID_CONFIG,"people.basic.java.grp-0"
+                ConsumerConfig.GROUP_ID_CONFIG,"people.advanced.java.grp-0"
         );
     }
 
@@ -47,8 +48,13 @@ public class PeopleConsumerConfig {
 
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String,Person> personListenerContainerFactory(){
+
         var factory = new ConcurrentKafkaListenerContainerFactory<String, Person>();
         factory.setConsumerFactory(consumerFactory());
+
+        // By default it does At-least-once processing (AckMode.BATCH)
+        factory.getContainerProperties().setAckMode(ContainerProperties.AckMode.RECORD);
+
         return factory;
     }
 
