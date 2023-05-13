@@ -68,3 +68,25 @@
 #### Consumer Lag
 - metric to understand how caught up the consumer is wrt the producer
 - it's possible to reset the offset to a partition; useful for re-processing or skipping messages
+
+
+## Confluent Schema Registry
+
+- provides a REST API for storing and retrieving JSON/Protobuf/Avro schemas -> Avro is the most common in industry
+- versioned history of key and value schemas
+
+- systems are unevitably cpuled to data
+- data exchange contracts + controlled data evolution
+
+- producer stores schema ID assigned by registry, and consumer uses it to retrieve the schema from the registry and deserialize the message
+- schemas are cached by the producer and consumer, so they don't have to go to the registry every time
+
+### Resources
+
+- Schema Compatibility enforcement summary: https://docs.confluent.io/platform/current/schema-registry/fundamentals/avro.html
+
+- On-premises deployment docker config: https://docs.confluent.io/platform/current/installation/docker/config-reference.html#sr-long-configuration
+
+- Schema Registry Configuration Options: https://docs.confluent.io/platform/current/schema-registry/installation/config.html
+
+- Schema Registry REST API Example Requests: https://docs.confluent.io/platform/current/schema-registry/develop/api.html#example-requests-format-and-valid-json
