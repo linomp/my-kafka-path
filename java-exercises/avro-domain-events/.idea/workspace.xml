@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0409b023-61af-43aa-be11-3a9d1a5edaf5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/main/avro/person_value.avsc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-producer/libs/avro-domain-events-0.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/commands/CreatePeopleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/configs/KafkaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/configs/PeopleProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/controllers/PeopleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/models/PersonDTO.java" afterDir="false" />
-    </list>
+    <list default="true" id="0409b023-61af-43aa-be11-3a9d1a5edaf5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -231,7 +223,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684060089442</updated>
-      <workItem from="1684060093384" duration="4940000" />
+      <workItem from="1684060093384" duration="5718000" />
     </task>
     <servers />
   </component>

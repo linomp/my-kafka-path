@@ -90,3 +90,10 @@
 - Schema Registry Configuration Options: https://docs.confluent.io/platform/current/schema-registry/installation/config.html
 
 - Schema Registry REST API Example Requests: https://docs.confluent.io/platform/current/schema-registry/develop/api.html#example-requests-format-and-valid-json
+
+### Console avro consumer
+Inside schema-registry container:
+
+```
+kafka-avro-console-consumer --bootstrap-server broker0:29092 --topic people.avro.java --from-beginning --property "schema.registry.url=http://localhost:8081"
+```
