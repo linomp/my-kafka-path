@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    bootstrap-servers: "localhost:9092,localhost:9093,localhost:9094"
+    producer:
+      properties:
+        schema.registry.url: "http://localhost:8081"
+
+topics:
+  people-avro:
+    name: "people.avro.java"
+    replicas: 3
+    partitions: 3
