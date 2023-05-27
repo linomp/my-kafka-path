@@ -1,0 +1,17 @@
+server:
+  port: 8088
+
+spring:
+  kafka:
+    bootstrap-servers: "localhost:9092,localhost:9093,localhost:9094"
+    consumer:
+      properties:
+        schema.registry.url: "http://localhost:8081"
+        group.id: "people-avro-grp-0"
+
+topics:
+  people-avro:
+    name: "people.avro.java"
+    replicas: 3
+    partitions: 3
+

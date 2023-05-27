@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0409b023-61af-43aa-be11-3a9d1a5edaf5" name="Changes" comment="" />
+    <list default="true" id="0409b023-61af-43aa-be11-3a9d1a5edaf5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../avro-people-consumer/libs/avro-domain-events-0.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../avro-people-consumer/src/main/java/com/thecodinginterface/avropeopleconsumer/configs/PeopleConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../avro-people-consumer/src/main/java/com/thecodinginterface/avropeopleconsumer/services/PersonConsumerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +20,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/../avro-people-consumer">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/../avro-people-producer">
@@ -92,25 +103,50 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/LM2P/Documents/000_programming/Kafka/java-exercises/avro-people-producer/libs",
+    "last_opened_file_path": "C:/Users/LM2P/Documents/000_programming/Kafka/java-exercises/avro-people-consumer/libs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "actions.on.save",
+    "spring.configuration.checksum": "0be3227257da8ecb7cea113263f532e0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-people-consumer\libs" />
       <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-people-producer\libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-people-consumer\src\main\java" />
       <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-domain-events\lib\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AvroPeopleProducerApplication">
+  <component name="RunManager" selected="Spring Boot.AvroPeopleConsumerApplication">
+    <configuration name="Tests in 'avro-people-producer'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../avro-people-producer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="avro-domain-events [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,6 +235,13 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="AvroPeopleConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="avro-people-consumer.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.thecodinginterface.avropeopleconsumer.AvroPeopleConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AvroPeopleProducerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="avro-people-producer.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.thecodinginterface.avropeopleproducer.AvroPeopleProducerApplication" />
@@ -208,6 +251,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'avro-people-producer'" />
         <item itemvalue="Gradle.avro-people-producer [build]" />
         <item itemvalue="Gradle.avro-domain-events [build]" />
         <item itemvalue="Gradle.avro-domain-events [clean]" />
@@ -223,7 +267,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684060089442</updated>
-      <workItem from="1684060093384" duration="5718000" />
+      <workItem from="1684060093384" duration="5824000" />
+      <workItem from="1685203494895" duration="4972000" />
     </task>
     <servers />
   </component>
