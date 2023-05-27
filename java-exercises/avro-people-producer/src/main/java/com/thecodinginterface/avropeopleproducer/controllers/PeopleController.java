@@ -46,16 +46,17 @@ public class PeopleController {
         for (int i = 0; i < cmd.getCount(); i++) {
             // Avro object to send
             var person = new Person();
-            person.setName(faker.name().fullName());
+            person.setFirstName(faker.name().firstName());
+            person.setLastName(faker.name().lastName());
             person.setTitle(faker.job().title());
 
             // DTO to return from REST endpoint
-            people.add(new PersonDTO(person.getName(), person.getTitle()));
+            people.add(new PersonDTO(person.getFirstName(), person.getLastName(), person.getTitle()));
 
             CompletableFuture<SendResult<String, Person>> future = kafkaTemplate
                     .send(
                             peopleTopic,
-                            person.getTitle().toLowerCase().replaceAll("\\s+", "-"),
+                            (person.getFirstName() + person.getLastName()).toLowerCase().replaceAll("\\s+", "-"),
                             person
                     );
 

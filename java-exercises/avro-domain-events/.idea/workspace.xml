@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0409b023-61af-43aa-be11-3a9d1a5edaf5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../avro-people-consumer/libs/avro-domain-events-0.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-consumer/src/main/java/com/thecodinginterface/avropeopleconsumer/configs/PeopleConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-consumer/src/main/java/com/thecodinginterface/avropeopleconsumer/services/PersonConsumerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../avro-people-consumer/libs/avro-domain-events-0.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../avro-people-producer/libs/avro-domain-events-0.2.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/avro/person_value.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/avro/person_value.avsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../avro-people-consumer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../avro-people-consumer/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../avro-people-consumer/libs/avro-domain-events-0.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../avro-people-producer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../avro-people-producer/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../avro-people-producer/libs/avro-domain-events-0.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/models/PersonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/models/PersonDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,21 +44,24 @@
         <task path="$PROJECT_DIR$/../avro-people-producer">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/../avro-people-consumer">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="avro-people-producer" type="f1a62948:ProjectNode" />
+                <item name="avro-people-consumer" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="avro-people-producer" type="f1a62948:ProjectNode" />
+                <item name="avro-people-consumer" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="avro-people-producer" type="f1a62948:ProjectNode" />
+                <item name="avro-people-consumer" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -103,7 +112,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/LM2P/Documents/000_programming/Kafka/java-exercises/avro-people-consumer/libs",
+    "last_opened_file_path": "C:/Users/LM2P/Documents/000_programming/Kafka/java-exercises/avro-people-producer/libs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,37 +125,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-people-consumer\libs" />
       <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-people-producer\libs" />
+      <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-people-consumer\libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-people-consumer\src\main\java" />
       <recent name="C:\Users\LM2P\Documents\000_programming\Kafka\java-exercises\avro-domain-events\lib\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AvroPeopleConsumerApplication">
-    <configuration name="Tests in 'avro-people-producer'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../avro-people-producer" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.AvroPeopleProducerApplication">
     <configuration name="avro-domain-events [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -159,28 +146,6 @@
         <option name="taskNames">
           <list>
             <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="avro-domain-events [classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="classes" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -213,7 +178,51 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="avro-people-producer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="avro-people-consumer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../avro-people-consumer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="avro-people-consumer [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../avro-people-consumer" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="avro-people-producer [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/../avro-people-producer" />
@@ -224,7 +233,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -251,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'avro-people-producer'" />
-        <item itemvalue="Gradle.avro-people-producer [build]" />
+        <item itemvalue="Gradle.avro-people-consumer [build]" />
+        <item itemvalue="Gradle.avro-people-consumer [clean]" />
         <item itemvalue="Gradle.avro-domain-events [build]" />
         <item itemvalue="Gradle.avro-domain-events [clean]" />
-        <item itemvalue="Gradle.avro-domain-events [classes]" />
+        <item itemvalue="Gradle.avro-people-producer [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +277,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684060089442</updated>
       <workItem from="1684060093384" duration="5824000" />
-      <workItem from="1685203494895" duration="4972000" />
+      <workItem from="1685203494895" duration="6173000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.1.0-SNAPSHOT'
-	id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+    id 'org.springframework.boot' version '3.1.0-SNAPSHOT'
+    id 'io.spring.dependency-management' version '1.1.0'
 }
 
 group = 'com.thecodinginterface'
@@ -9,45 +9,45 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
 configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 repositories {
-	mavenCentral()
-	maven { url 'https://repo.spring.io/milestone' }
-	maven { url 'https://repo.spring.io/snapshot' }
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
 
-	// directory with jar from avro-domain-events project
-	flatDir {
-		dirs 'libs'
-	}
+    // directory with jar from avro-domain-events project
+    flatDir {
+        dirs 'libs'
+    }
 
-	// confluent's maven repo
-	maven {
-		url "https://packages.confluent.io/maven/"
-	}
+    // confluent's maven repo
+    maven {
+        url "https://packages.confluent.io/maven/"
+    }
 }
 
 dependencies {
-	implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
 
-	implementation 'org.apache.avro:avro:1.11.0'
-	implementation group: 'io.confluent', name: 'kafka-avro-serializer', version: '5.3.0'
-	implementation group: 'io.confluent', name: 'kafka-schema-registry-client', version: '5.3.0'
+    implementation 'org.apache.avro:avro:1.11.0'
+    implementation group: 'io.confluent', name: 'kafka-avro-serializer', version: '5.3.0'
+    implementation group: 'io.confluent', name: 'kafka-schema-registry-client', version: '5.3.0'
 
-	// link with avro-domain-events project
-	implementation files('libs/avro-domain-events-0.1.0.jar')
+    // link with avro-domain-events project
+    implementation files('libs/avro-domain-events-0.2.0.jar')
 
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.kafka:spring-kafka'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.kafka:spring-kafka-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.kafka:spring-kafka'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }

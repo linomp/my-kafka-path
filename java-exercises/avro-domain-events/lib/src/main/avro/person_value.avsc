@@ -3,7 +3,19 @@
     "type": "record",
     "name": "Person",
     "fields": [
-        {"name": "name", "type": "string"},
-        {"name": "title", "type": "string"}
+        {
+            "name": "firstName",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name": "lastName",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name": "title",
+            "type": "string"
+        }
     ]
 }

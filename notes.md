@@ -97,3 +97,6 @@ Inside schema-registry container:
 ```
 kafka-avro-console-consumer --bootstrap-server broker0:29092 --topic people.avro.java --from-beginning --property "schema.registry.url=http://localhost:8081"
 ```
+
+### Evolving Schema
+- schema registry helps to put railguards for schema evolution
