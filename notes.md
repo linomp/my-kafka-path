@@ -100,3 +100,5 @@ kafka-avro-console-consumer --bootstrap-server broker0:29092 --topic people.avro
 
 ### Evolving Schema
 - schema registry helps to put railguards for schema evolution
+- by default, schema registry is configured to allow backward compatibility (new schema can read old data);  only deleting fields and adding optional fields is allowed. 
+
