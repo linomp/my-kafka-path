@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0409b023-61af-43aa-be11-3a9d1a5edaf5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../avro-people-consumer/libs/avro-domain-events-0.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../avro-people-producer/libs/avro-domain-events-0.2.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/avro/person_value.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/avro/person_value.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avro-people-consumer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../avro-people-consumer/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avro-people-consumer/libs/avro-domain-events-0.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avro-people-producer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../avro-people-producer/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avro-people-producer/libs/avro-domain-events-0.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/controllers/PeopleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/models/PersonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../avro-people-producer/src/main/java/com/thecodinginterface/avropeopleproducer/models/PersonDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes.md" afterDir="false" />
-    </list>
+    <list default="true" id="0409b023-61af-43aa-be11-3a9d1a5edaf5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,23 +35,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="avro-people-consumer" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="avro-people-consumer" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="avro-people-consumer" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -277,7 +247,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684060089442</updated>
       <workItem from="1684060093384" duration="5824000" />
-      <workItem from="1685203494895" duration="6173000" />
+      <workItem from="1685203494895" duration="6439000" />
     </task>
     <servers />
   </component>
