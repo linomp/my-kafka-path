@@ -108,3 +108,13 @@ kafka-avro-console-consumer --bootstrap-server broker0:29092 --topic people.avro
 - can also POST new schema versions to the registry
 
 ## Kafka Connect
+
+- Connectors = reusable plugins
+- config only , low/no code for reliably & scalably pipelining data between systems
+- Source Connectors abstract Producer API
+- Sink Connectors abstract Consumer API
+- they are packaged as JARs, and run in their own JVMs. They are called workers
+- Workers can be controlled through Kafka Connect REST API
+
+- there are connectors even for flat files, DBs
+- Kafka connect cluster is deployed on its own compute resources, separate `from the brokers
