@@ -23,7 +23,7 @@ def make_consumer() -> DeserializingConsumer:
     # create avro deserializer
     avro_deserializer = AvroDeserializer(
         schema_reg_client,
-        schemas.person_value_v1,
+        schemas.person_value_v2,
         lambda person, ctx: Person(**person)
     )
 
@@ -35,7 +35,7 @@ def make_consumer() -> DeserializingConsumer:
             "value.deserializer": avro_deserializer,
             "group.id": os.getenv("CONSUMER_GROUP"),
             "enable.auto.commit": False,  # we will commit manually to get as close to once-only as possible
-            "auto.offset.reset": "earliest"
+            "auto.offset.reset": "latest"
         }
     )
 

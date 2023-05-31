@@ -51,7 +51,7 @@ def make_producer() -> SerializingProducer:
     # last parameter: callable that converts objects we wnt to send, into  dictionaries
     avro_serializer = AvroSerializer(
         schema_reg_client,
-        schemas.person_value_v1,
+        schemas.person_value_v2,
         lambda person, ctx: person.dict()
     )
 
@@ -83,8 +83,8 @@ async def create_people(command: CreatePeopleCommand):
 
     for _ in range(command.count):
         person = Person(
-            id=faker.uuid4(),
-            name=faker.name(),
+            first_name=faker.first_name(),
+            last_name=faker.last_name(),
             title=faker.job().title(),
         )
         people.append(person)
