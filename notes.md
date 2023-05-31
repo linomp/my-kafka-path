@@ -102,3 +102,9 @@ kafka-avro-console-consumer --bootstrap-server broker0:29092 --topic people.avro
 - schema registry helps to put railguards for schema evolution
 - by default, schema registry is configured to allow backward compatibility (new schema can read old data);  only deleting fields and adding optional fields is allowed. 
 
+### Schema registry REST API
+- each schema is given a global ID in the registry
+- idea: use the compatibility endpoint to check if a new schema is compatible with the current schema from CI/CD pipeline
+- can also POST new schema versions to the registry
+
+## Kafka Connect
