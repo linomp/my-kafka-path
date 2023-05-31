@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Producer&amp;Consumer" type="CompoundRunConfigurationType">
+    <toRun name="1_producer_server" type="PythonConfigurationType" />
+    <toRun name="2_consumer" type="PythonConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>

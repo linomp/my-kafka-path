@@ -91,6 +91,7 @@ async def create_people(command: CreatePeopleCommand):
         producer.produce(
             topic=os.environ.get("TOPICS_PEOPLE_AVRO_NAME"),
             key=to_kafka_message_key(person.title),
+            value=person
         )
 
     # always important to flush the producer, so that it blocks until all messages are sent, including retries
