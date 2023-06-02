@@ -12,7 +12,7 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     networks:
       - localnet
-      
+
   broker0:
     image: confluentinc/cp-kafka:6.1.1
     hostname: broker0
@@ -162,7 +162,6 @@ services:
     networks:
       - localnet
 
-  # docker exec -it mongosh mongosh mongodb://root:example@mongodb:27017
   mongosh:
     image: mongo:5.0
     container_name: mongosh
