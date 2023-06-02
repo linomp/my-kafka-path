@@ -1,0 +1,22 @@
+
+plugins {
+    id 'java-library'
+    id "com.github.davidmc24.gradle.plugin.avro" version "1.3.0"
+    id "idea"
+}
+
+group "com.thecodinginterface"
+version "0.1.0"
+archivesBaseName = "${rootProject.name}"
+
+repositories {
+    // Use JCenter for resolving dependencies.
+    jcenter()
+}
+
+dependencies {
+    // Use JUnit test framework.
+    testImplementation 'junit:junit:4.13'
+
+    implementation "org.apache.avro:avro:1.11.0"
+}

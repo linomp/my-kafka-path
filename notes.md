@@ -135,3 +135,31 @@ use kafka-course
 show collections
 db.technologists.find({})
 ```
+
+## Kafka Streams (Java API)
+- ships with kafka
+- continuous computation over unbounded streams of events
+- DSL API (high level) and Processor API (low level)
+
+- Use cases: 
+    - event driven microservices
+    - data engineering (data transfer, data transformation, enrichment, aggregation, filtering, joining, windowing, etc)
+    - real-time analytics, predictive analytics, online machine learning
+
+- DSL API
+    - Stream: continuously flowing immutable sequence of events (key-value pairs)
+    - Table: snapshot of a stream's state grouped and aggregated by key
+
+- Transformation types
+    - Stateless: applied to each evebt, not requiring knowledge from previous events (filter and map)
+        - example: map order events doing some math with th eprice and qty, then filter out the ones under a certain threshold
+    - Stateful: requires knowledge from previous events (join, reduce, aggregate, count)
+        - example: group orders by customer id (key), then reduce (sum revenue by customer)
+
+- Processing Topology: abstraction to model the processing logic as collection of processor nodes in a directed acyclic graph
+    - nodes: represent processors (source, sink, stateless/stateful transformation)
+
+- topologies excute in tasks, tasks execute in application instances, and you can have up to N parallel instances of your application, where N is the number of partitions of the input topic
+    - golden rule: in kafka parallelism is dictated by the number of partitions of the input topic
+    - streams are just an abstraction on top of consumer/producer APIs, so they are subject to the same rules
+

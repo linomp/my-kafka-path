@@ -1,0 +1,23 @@
+server:
+  port: 8087
+
+spring:
+  kafka:
+    bootstrap-servers: "localhost:9092,localhost:9093,localhost:9094"
+    properties:
+      schema.registry.url: "http://localhost:8081"
+
+topics:
+  common:
+    partitions: 3
+    replicas: 3
+    retention-ms: 21600000
+  customers:
+    name: "customers"
+    cleanup-policy: "compact"
+  products:
+    name: "products"
+    cleanup-policy: "compact"
+  order-created:
+    name: "order.created"
+    cleanup-policy: "delete"
