@@ -1,0 +1,13 @@
+{
+    "name": "technologists-sink",
+    "connection.uri": "mongodb://root:example@mongodb:27017",
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "database": "kafka-course",
+    "collection": "technologists",
+    "topics": "technologists",
+    "tasks.max": "1",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081"
+}

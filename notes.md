@@ -118,3 +118,20 @@ kafka-avro-console-consumer --bootstrap-server broker0:29092 --topic people.avro
 
 - there are connectors even for flat files, DBs
 - Kafka connect cluster is deployed on its own compute resources, separate `from the brokers
+
+### Source & Sink exercise
+
+Fire up avro consumer on schema-registry container:
+```
+docker exec -it schema-registry kafka-avro-console-consumer --bootstrap-server broker0:29092 --topic technologists --from-beginning --property "schema.registry.url=http://localhost:8081"
+```
+
+Fire up mongo shell on mongo container:
+```
+docker exec -it mongosh mongosh mongodb://root:example@mongodb:27017
+
+show dbs
+use kafka-course
+show collections
+db.technologists.find({})
+```

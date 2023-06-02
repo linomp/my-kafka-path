@@ -1,0 +1,35 @@
+
+{
+  "type": "record",
+  "name": "Technologist",
+  "fields": [
+    {
+      "name": "firstName",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": ["Bill", "Sue", "Pat", "Jo"]
+        }
+      }
+    }, 
+    {
+      "name": "lastName",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": ["Smitch", "Adams", "Murphy", "Patel"]
+        }
+      }
+    },
+    {
+      "name": "title",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": ["Jr Engineer", "Sr Engineer", "Prin Engineer"]
+        }
+      }
+    }
+  ]
+}
+
