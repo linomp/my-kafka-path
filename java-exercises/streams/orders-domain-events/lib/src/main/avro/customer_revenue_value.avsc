@@ -1,6 +1,6 @@
 {
   "namespace": "com.thecodinginterface.ordersdomainevents",
-  "name": "Product",
+  "name": "CustomerRevenue",
   "type": "record",
   "fields": [
     {
@@ -12,7 +12,7 @@
       "type": "string"
     },
     {
-      "name": "price",
+      "name": "revenue",
       "type": "int"
     }
   ]

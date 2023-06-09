@@ -1,6 +1,6 @@
 {
   "namespace": "com.thecodinginterface.ordersdomainevents",
-  "name": "Order",
+  "name": "ProductOrder",
   "type": "record",
   "fields": [
     {
@@ -16,18 +16,21 @@
       "type": "int"
     },
     {
-      "name": "productQty",
+      "name": "productName",
+      "type": "string"
+    },
+    {
+      "name": "productQuantity",
+      "type": "int"
+    },
+    {
+      "name": "productPrice",
       "type": "int"
     },
     {
       "name": "createdMs",
       "type": "long",
       "logicalType": "timestamp-millis"
-    },
-    {
-      "name": "valid",
-      "type": "boolean",
-      "default": false
     }
   ]
 }
