@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.thecodinginterface'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	flatDir {
+		dirs 'libs'
+	}
+	maven {
+		url "https://packages.confluent.io/maven"
+	}
+}
+
+dependencies {
+	implementation "org.apache.avro:avro:1.11.0"
+	implementation group: 'io.confluent', name: 'kafka-avro-serializer', version: '5.3.0'
+	implementation group: 'io.confluent', name: 'kafka-schema-registry-client', version: '5.3.0'
+
+	implementation files("libs/orders-domain-events-0.1.0.jar")
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.kafka:spring-kafka'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
