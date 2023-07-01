@@ -43,8 +43,8 @@ public class OrderValidationService {
     @Value("${topics.order-validated.name}")
     String orderValidatedTopic;
 
-    // constant for random invalid assignment base don probability\
-    static final double VALID_ORDER_PROBABILITY = 0.7;
+    // constant for random invalid assignment based on probability
+    static final double VALID_ORDER_PROBABILITY = 0.5;
 
 
     public Map<String, Object> valueSerdeConfig() {
@@ -75,7 +75,7 @@ public class OrderValidationService {
                                 .setValid(randNum <= VALID_ORDER_PROBABILITY)
                                 .build();
                     })
-                    .peek((key, value) -> logger.info("Order validated: " + value))
+//                    .peek((key, order) -> logger.info("Order validated: " + order))
                     .to(orderValidatedTopic);
         }
     }

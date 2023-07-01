@@ -26,37 +26,43 @@ public class KafkaConfig {
     @Value("${spring.kafka.properties.schema.registry.url}")
     String schemaRegUrl;
 
+    @Value("${topics.order-validated.name}")
+    String orderValidationTopic;
+
+    @Value("${topics.customer-revenue.name}")
+    String customerRevenueTopic;
+
+    @Value("${topics.common.partitions}")
+    int defaultPartitions;
+
     @Value("${topics.common.replicas}")
     int defaultReplicas;
 
     @Value("${topics.common.retention-ms}")
     int defaultRetention;
 
-    @Value("${topics.products.cleanup-policy}")
-    String productsTopicCleanupPolicy;
-
-    @Value("${topics.order-created.name}")
-    String orderCreatedTopic;
-
-    @Value("${topics.order-validated.name}")
-    String orderValidatedTopic;
-
-
     static final String ORDER_PROCESSING_APP_ID = "order-processing-app";
 
     @Bean
-    public NewTopic createOrderValidationTopic() {
-        return TopicBuilder.name(orderValidatedTopic)
+    public NewTopic orderValidationTopic() {
+        return TopicBuilder.name(orderValidationTopic)
                 .replicas(defaultReplicas)
-                .configs(Map.of(
-                        TopicConfig.RETENTION_MS_CONFIG, Integer.toString(defaultRetention)
-                ))
+                .partitions(defaultPartitions)
+                .config(TopicConfig.RETENTION_MS_CONFIG, Integer.toString(defaultRetention))
                 .build();
     }
 
-    // CONFIGURATION FOR KAFKA STREAMS
+    @Bean
+    public NewTopic customerRevenueTopic() {
+        return TopicBuilder.name(customerRevenueTopic)
+                .replicas(defaultReplicas)
+                .partitions(defaultPartitions)
+                .config(TopicConfig.RETENTION_MS_CONFIG, Integer.toString(defaultRetention))
+                .build();
+    }
+
     @Bean(name = KafkaStreamsDefaultConfiguration.DEFAULT_STREAMS_CONFIG_BEAN_NAME)
-    public KafkaStreamsConfiguration kStreamsConfigs() {
+    public KafkaStreamsConfiguration kafkaStreamsConfiguration() {
         return new KafkaStreamsConfiguration(Map.of(
                 StreamsConfig.APPLICATION_ID_CONFIG, ORDER_PROCESSING_APP_ID,
                 StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers,

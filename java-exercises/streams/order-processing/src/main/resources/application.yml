@@ -1,5 +1,5 @@
 server:
-  port: 8089
+  port: 8088
 
 spring:
   kafka:
@@ -24,3 +24,5 @@ topics:
   order-validated:
     name: "order.validated"
     cleanup-policy: "delete"
+  customer-revenue:
+    name: "customer.revenue"
