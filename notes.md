@@ -163,3 +163,8 @@ db.technologists.find({})
     - golden rule: in kafka parallelism is dictated by the number of partitions of the input topic
     - streams are just an abstraction on top of consumer/producer APIs, so they are subject to the same rules
 
+## Windows
+- windows are a way to group events by time
+- Tumbling Windows: non-overlapping. Ex: give me the revenue of the last 60 sec. , you gotta wait a full 60 sec in-between results
+- Sliding Windows (a.k.a Hopping): overlapping. Ex: give me the revenue of the last 60 sec, every 10 sec.  (you get a new result every 10 sec - computed over the last 60 sec at that point in time)
+- Session Windows: bounded by period of inactivity. Ex: give me the revenue of the last 60 sec, but if there is a gap of 10 sec between events, then start a new window
